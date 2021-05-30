@@ -32,13 +32,13 @@ cv21b.programming03 语义分割练习
    - 小组构成：小组成员的学号和姓名
 
 【使用流程】
-1. 下载数据集并放在 cv21b.programming02-dataset 文件夹下
-2. 运行 train_res50_fpn.py 训练模型
+(使用过程中可能出现文件位置相关问题，自行解决)
+1. 下载数据集并按照 dataset 文件夹下的README.md指示放置图片
+2. 运行 train.py 训练模型
 3. 运行 predict.py 生成结果文件
-4. result 文件夹中包含 PPT，训练了1个epoch的模型权重，结果文件
+4. result 文件夹中包含 PPT，训练好的模型权重，结果图片压缩文件
 5. eval.py 用于计算验证集上的mAP。其中验证集上的预测结果需要用训练好的模型&predict.py生成
-6. 预训练好的权重和训练好的权重
-   https://pan.baidu.com/s/1lYThd30nl8nIXS-MlYqmLg 提取码：8efg
+6. 模型生成的图片是RGB模式，原标记图片是P模式，可运行 format.py 进行转换
 
 **具体代码解析和其他使用问题，参考 https://www.bilibili.com/video/BV1bz4y1f77C**
 
