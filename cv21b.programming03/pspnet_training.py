@@ -138,8 +138,8 @@ class Generator(object):
             name = annotation_line.split()[0]
             
             # 从文件中读取图像
-            jpg = Image.open(os.path.join(os.path.join(self.dataset_path, "JPEGImages"), name + ".jpg"))
-            png = Image.open(os.path.join(os.path.join(self.dataset_path, "SegmentationClass"), name + ".png"))
+            jpg = Image.open(os.path.join(os.path.join(self.dataset_path, "image"), name + ".jpg"))
+            png = Image.open(os.path.join(os.path.join(self.dataset_path, "annotation"), name + ".png"))
 
             if random_data:
                 jpg, png = self.get_random_data(jpg, png, (int(self.image_size[0]),int(self.image_size[1])))
