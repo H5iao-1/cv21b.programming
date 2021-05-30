@@ -23,5 +23,5 @@ if __name__ == "__main__":
                 continue
             else:
                 r_image = pspnet.detect_image(image)
-                r_image.save("test/"+str(i)+".png",)
+                r_image.save("result/test/"+str(i)+".png",)
 
