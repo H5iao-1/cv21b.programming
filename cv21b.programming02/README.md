@@ -41,5 +41,7 @@ cv21b.programming02  物体检测练习
 3. 运行 predict.py 生成结果文件
 4. result 文件夹中包含 PPT，训练了1个epoch的模型权重，结果文件
 5. eval.py 用于计算验证集上的mAP。其中验证集上的预测结果需要用训练好的模型&predict.py生成
+6. 预训练好的权重和训练好的权重
+   https://pan.baidu.com/s/1lYThd30nl8nIXS-MlYqmLg 提取码：8efg
 
 **具体代码解析和其他使用问题，参考 https://b23.tv/HvMiDy**
