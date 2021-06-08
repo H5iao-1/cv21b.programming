@@ -28,6 +28,7 @@ cv21b.programming04 人脸识别练习
 2. 运行 face_recognize.py ，运行过程中的路径相关问题自行解决。
 
 3. 更多使用问题参考
-
    https://www.bilibili.com/video/BV1wJ411x7tF/?spm_id_from=333.788.recommend_more_video.1
+   
+4. result - 结果文件
 
