@@ -43,3 +43,4 @@ Accuracy=正确预测字符数量/所有真实字符数量
 4. 运行 create_dataset.py 生成数据库
 5. 运行 train.py 进行训练，相关参数说明可间上述项目地址。尤其注意参数 character。
 6. 运行 demo.py 进行预测，生成结果。
+7. eval.py 为评估文件
