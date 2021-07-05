@@ -143,7 +143,7 @@ def main():
             val_step(test_images, test_labels)
 
             # print val process
-            val_bar.desc = "valid epoch[{}/{}] loss:{:.3f}, acc:{:.3f}".format(epoch + 1,
+            val_bar.desc = "val epoch[{}/{}] loss:{:.3f}, acc:{:.3f}".format(epoch + 1,
                                                                                epochs,
                                                                                val_loss.result(),
                                                                                val_accuracy.result())

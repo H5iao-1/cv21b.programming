@@ -96,7 +96,7 @@ class AnchorsGenerator(nn.Module):
             cell_anchors = self.cell_anchors
             assert cell_anchors is not None
             # suppose that all anchors have the same device
-            # which is a valid assumption in the current state of the codebase
+            # which is a val assumption in the current state of the codebase
             if cell_anchors[0].device == device:
                 return
 

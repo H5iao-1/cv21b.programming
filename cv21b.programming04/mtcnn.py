@@ -14,14 +14,14 @@ import utils
 def create_Pnet(weight_path):
     inputs = Input(shape=[None, None, 3])
 
-    x = Conv2D(10, (3, 3), strides=1, padding='valid', name='conv1')(inputs)
+    x = Conv2D(10, (3, 3), strides=1, padding='val', name='conv1')(inputs)
     x = PReLU(shared_axes=[1,2],name='PReLU1')(x)
     x = MaxPool2D(pool_size=2)(x)
 
-    x = Conv2D(16, (3, 3), strides=1, padding='valid', name='conv2')(x)
+    x = Conv2D(16, (3, 3), strides=1, padding='val', name='conv2')(x)
     x = PReLU(shared_axes=[1,2],name='PReLU2')(x)
 
-    x = Conv2D(32, (3, 3), strides=1, padding='valid', name='conv3')(x)
+    x = Conv2D(32, (3, 3), strides=1, padding='val', name='conv3')(x)
     x = PReLU(shared_axes=[1,2],name='PReLU3')(x)
 
     classifier = Conv2D(2, (1, 1), activation='softmax', name='conv4-1')(x)
@@ -38,17 +38,17 @@ def create_Pnet(weight_path):
 def create_Rnet(weight_path):
     inputs = Input(shape=[24, 24, 3])
     # 24,24,3 -> 22,22,28 -> 11,11,28
-    x = Conv2D(28, (3, 3), strides=1, padding='valid', name='conv1')(inputs)
+    x = Conv2D(28, (3, 3), strides=1, padding='val', name='conv1')(inputs)
     x = PReLU(shared_axes=[1, 2], name='prelu1')(x)
     x = MaxPool2D(pool_size=3,strides=2, padding='same')(x)
 
     # 11,11,28 -> 9,9,48 -> 4,4,48
-    x = Conv2D(48, (3, 3), strides=1, padding='valid', name='conv2')(x)
+    x = Conv2D(48, (3, 3), strides=1, padding='val', name='conv2')(x)
     x = PReLU(shared_axes=[1, 2], name='prelu2')(x)
     x = MaxPool2D(pool_size=3, strides=2)(x)
 
     # 4,4,48 -> 3,3,64
-    x = Conv2D(64, (2, 2), strides=1, padding='valid', name='conv3')(x)
+    x = Conv2D(64, (2, 2), strides=1, padding='val', name='conv3')(x)
     x = PReLU(shared_axes=[1, 2], name='prelu3')(x)
 
     # 3,3,64 -> 64,3,3
@@ -75,22 +75,22 @@ def create_Rnet(weight_path):
 def create_Onet(weight_path):
     inputs = Input(shape = [48,48,3])
     # 48,48,3 -> 46,46,32 -> 23,23,32
-    x = Conv2D(32, (3, 3), strides=1, padding='valid', name='conv1')(inputs)
+    x = Conv2D(32, (3, 3), strides=1, padding='val', name='conv1')(inputs)
     x = PReLU(shared_axes=[1,2],name='prelu1')(x)
     x = MaxPool2D(pool_size=3, strides=2, padding='same')(x)
 
     # 23,23,32 -> 21,21,64 -> 10,10,64
-    x = Conv2D(64, (3, 3), strides=1, padding='valid', name='conv2')(x)
+    x = Conv2D(64, (3, 3), strides=1, padding='val', name='conv2')(x)
     x = PReLU(shared_axes=[1,2],name='prelu2')(x)
     x = MaxPool2D(pool_size=3, strides=2)(x)
 
     # 8,8,64 -> 4,4,64
-    x = Conv2D(64, (3, 3), strides=1, padding='valid', name='conv3')(x)
+    x = Conv2D(64, (3, 3), strides=1, padding='val', name='conv3')(x)
     x = PReLU(shared_axes=[1,2],name='prelu3')(x)
     x = MaxPool2D(pool_size=2)(x)
 
     # 4,4,64 -> 3,3,128
-    x = Conv2D(128, (2, 2), strides=1, padding='valid', name='conv4')(x)
+    x = Conv2D(128, (2, 2), strides=1, padding='val', name='conv4')(x)
     x = PReLU(shared_axes=[1,2],name='prelu4')(x)
 
     # 3,3,128 -> 128,12,12
